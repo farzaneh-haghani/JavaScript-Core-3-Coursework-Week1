@@ -1,3 +1,4 @@
+debugger
 let myLibrary = [];
 
 window.addEventListener("load", function (e) {
@@ -38,9 +39,7 @@ function submit() {
     return false;
   } else {
     let book = new Book(title.value, author.value, pages.value, check.checked);
-    console.log(check.checked);
-    if (check.checked)
-      myLibrary.push(book);
+    myLibrary.push(book);
     render();
   }
 }
@@ -78,7 +77,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].check == true) {
       readStatus = "Yes";
     } else {
       readStatus = "No";
